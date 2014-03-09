@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LOLAPI.Data", "LOLAPI.Data\LOLAPI.Data.csproj", "{F93C3E71-3156-4603-9FE0-6592D7E1CB12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LOLAPI.Logic", "LOLAPI.Logic\LOLAPI.Logic.csproj", "{D4CA7740-E953-416A-B4E0-A403217C6448}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LOLAPI.Web", "LOLAPI.Web\LOLAPI.Web.csproj", "{35AEBE3E-96AF-47B5-A48B-6DB97B5EA4C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F93C3E71-3156-4603-9FE0-6592D7E1CB12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F93C3E71-3156-4603-9FE0-6592D7E1CB12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F93C3E71-3156-4603-9FE0-6592D7E1CB12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F93C3E71-3156-4603-9FE0-6592D7E1CB12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4CA7740-E953-416A-B4E0-A403217C6448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4CA7740-E953-416A-B4E0-A403217C6448}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4CA7740-E953-416A-B4E0-A403217C6448}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4CA7740-E953-416A-B4E0-A403217C6448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35AEBE3E-96AF-47B5-A48B-6DB97B5EA4C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35AEBE3E-96AF-47B5-A48B-6DB97B5EA4C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35AEBE3E-96AF-47B5-A48B-6DB97B5EA4C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35AEBE3E-96AF-47B5-A48B-6DB97B5EA4C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
