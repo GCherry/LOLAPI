@@ -6,6 +6,10 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Data.Entity;
+using LOLAPI.Data;
+using LOLAPI.Data.Migrations;
+
 
 namespace LOLAPI.Web
 {
@@ -23,6 +27,10 @@ namespace LOLAPI.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
+
+            //Initialize the Database
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<LoLDBContext, Configuration>(LoLDBContext.ConnectionStringName));
+            new LoLDBContext().Database.Initialize(false);
         }
     }
 }
