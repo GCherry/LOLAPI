@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Entities\Champion.cs" />
     <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Interfaces\IManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

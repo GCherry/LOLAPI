@@ -16,6 +16,7 @@ namespace LOLAPI.Data.ModelMappings
         {
             this.Property(i => i.ChampionName).IsRequired().HasMaxLength(500);
             this.Property(i => i.ChampionDesc).IsOptional();
+            this.Property(i => i.Active).IsRequired();
         }
     }
 }

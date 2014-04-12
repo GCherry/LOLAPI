@@ -10,5 +10,6 @@ namespace LOLAPI.Shared.Entities
     {
         public string ChampionName { get; set; }
         public string ChampionDesc { get; set; }
+        public bool Active { get; set; }
     }
 }

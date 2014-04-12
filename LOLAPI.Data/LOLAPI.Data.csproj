@@ -368,6 +368,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoLDBContext.cs" />
+    <Compile Include="Migrations\201404121433506_init.cs" />
+    <Compile Include="Migrations\201404121433506_init.Designer.cs">
+      <DependentUpon>201404121433506_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201404121521497_AddChampionActive.cs" />
+    <Compile Include="Migrations\201404121521497_AddChampionActive.Designer.cs">
+      <DependentUpon>201404121521497_AddChampionActive.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelMappings\BaseEntityModelMap.cs" />
     <Compile Include="ModelMappings\ChampionModelMap.cs" />
@@ -377,6 +385,14 @@
       <Project>{bfbde7d3-8101-4244-8639-1ab35a718974}</Project>
       <Name>LOLAPI.Shared</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201404121433506_init.resx">
+      <DependentUpon>201404121433506_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201404121521497_AddChampionActive.resx">
+      <DependentUpon>201404121521497_AddChampionActive.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
