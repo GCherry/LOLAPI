@@ -368,17 +368,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LoLDBContext.cs" />
-    <Compile Include="Migrations\201404121433506_init.cs" />
-    <Compile Include="Migrations\201404121433506_init.Designer.cs">
-      <DependentUpon>201404121433506_init.cs</DependentUpon>
+    <Compile Include="Migrations\201404150246136_init.cs" />
+    <Compile Include="Migrations\201404150246136_init.Designer.cs">
+      <DependentUpon>201404150246136_init.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201404121521497_AddChampionActive.cs" />
-    <Compile Include="Migrations\201404121521497_AddChampionActive.Designer.cs">
-      <DependentUpon>201404121521497_AddChampionActive.cs</DependentUpon>
+    <Compile Include="Migrations\201404151023330_UserAccountEmailColumn.cs" />
+    <Compile Include="Migrations\201404151023330_UserAccountEmailColumn.Designer.cs">
+      <DependentUpon>201404151023330_UserAccountEmailColumn.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelMappings\BaseEntityModelMap.cs" />
     <Compile Include="ModelMappings\ChampionModelMap.cs" />
+    <Compile Include="ModelMappings\UserAccountModelMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LOLAPI.Shared\LOLAPI.Shared.csproj">
@@ -387,11 +388,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201404121433506_init.resx">
-      <DependentUpon>201404121433506_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201404150246136_init.resx">
+      <DependentUpon>201404150246136_init.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201404121521497_AddChampionActive.resx">
-      <DependentUpon>201404121521497_AddChampionActive.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201404151023330_UserAccountEmailColumn.resx">
+      <DependentUpon>201404151023330_UserAccountEmailColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -25,12 +25,14 @@ namespace LOLAPI.Data
         public LoLDBContext() : base(ConnectionStringName) { }
 
         public IDbSet<Champion> Champions { get; set; }
+        public IDbSet<UserAccount> UserAccounts { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
 
             modelBuilder.Configurations.Add(new ChampionModelMap());
+            modelBuilder.Configurations.Add(new UserAccountModelMap());
         }
     }
 }

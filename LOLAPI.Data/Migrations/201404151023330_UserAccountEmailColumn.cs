@@ -3,16 +3,16 @@ namespace LOLAPI.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AddChampionActive : DbMigration
+    public partial class UserAccountEmailColumn : DbMigration
     {
         public override void Up()
         {
-            AddColumn("dbo.Champion", "Active", c => c.Boolean(nullable: false));
+            AddColumn("dbo.UserAccount", "Email", c => c.String(nullable: false, maxLength: 500));
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Champion", "Active");
+            DropColumn("dbo.UserAccount", "Email");
         }
     }
 }

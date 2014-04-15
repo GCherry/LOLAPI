@@ -8,7 +8,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using System.Data.Entity;
 using LOLAPI.Data;
-using LOLAPI.Data.Migrations;
+//using LOLAPI.Data.Migrations;
 
 
 namespace LOLAPI.Web
@@ -29,7 +29,7 @@ namespace LOLAPI.Web
             AuthConfig.RegisterAuth();
 
             //Initialize the Database
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<LoLDBContext, Configuration>(LoLDBContext.ConnectionStringName));
+            //Database.SetInitializer(new MigrateDatabaseToLatestVersion<LoLDBContext, Configuration>(LoLDBContext.ConnectionStringName));
             new LoLDBContext().Database.Initialize(false);
         }
     }

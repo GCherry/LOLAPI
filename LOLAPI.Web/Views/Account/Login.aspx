@@ -10,6 +10,7 @@
     </hgroup>
 
     <section id="loginForm">
+
     <h2>Use a local account to log in.</h2>
     <% using (Html.BeginForm(new { ReturnUrl = ViewBag.ReturnUrl })) { %>
         <%: Html.AntiForgeryToken() %>

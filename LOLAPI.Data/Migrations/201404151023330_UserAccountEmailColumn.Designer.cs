@@ -7,13 +7,13 @@ namespace LOLAPI.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class init : IMigrationMetadata
+    public sealed partial class UserAccountEmailColumn : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(init));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UserAccountEmailColumn));
         
         string IMigrationMetadata.Id
         {
-            get { return "201404121433506_init"; }
+            get { return "201404151023330_UserAccountEmailColumn"; }
         }
         
         string IMigrationMetadata.Source

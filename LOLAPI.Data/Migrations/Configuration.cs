@@ -6,7 +6,7 @@ namespace LOLAPI.Data.Migrations
     using System.Linq;
     using LOLAPI.Shared.Entities;
 
-    public sealed class Configuration : DbMigrationsConfiguration<LOLAPI.Data.LoLDBContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<LOLAPI.Data.LoLDBContext>
     {
         public Configuration()
         {
@@ -28,13 +28,17 @@ namespace LOLAPI.Data.Migrations
             //    );
             //
 
-            //context.Champions.AddOrUpdate(
-            //    c => c.ChampionName,
-            //    new Champion()
-            //    {
-            //        ChampionName = "Champ Name",
-            //        ChampionDesc = "Champ Lore"
-            //    });
+            context.UserAccounts.AddOrUpdate(
+              u => u.UserName,
+              new UserAccount 
+              { 
+                  UserName = "admin",
+                  Password = "password",
+                  Email = "gcherry2@gmail.com",
+                  Active = true
+              }
+            );
+
         }
     }
 }
