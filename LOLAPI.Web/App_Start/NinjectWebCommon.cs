@@ -5,9 +5,9 @@ namespace LOLAPI.Web.App_Start
 {
     using System;
     using System.Web;
-
+    using LOLAPI.Logic;
+    using LOLAPI.Shared.Interfaces;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-
     using Ninject;
     using Ninject.Web.Common;
 
@@ -61,7 +61,7 @@ namespace LOLAPI.Web.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-
+            kernel.Bind<IUserManager>().To<UserAccountManager>();
         }        
     }
 }

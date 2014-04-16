@@ -50,6 +50,7 @@
     <Compile Include="Entities\Entity.cs" />
     <Compile Include="Entities\UserAccount.cs" />
     <Compile Include="Interfaces\IManager.cs" />
+    <Compile Include="Interfaces\IUserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
