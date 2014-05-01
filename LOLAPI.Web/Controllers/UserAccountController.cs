@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using LOLAPI.Shared.Entities;
 using LOLAPI.Shared.Interfaces;
 using LOLAPI.Logic;
+using System.Security.Cryptography;
 
 namespace LOLAPI.Web.Controllers
 {
@@ -43,6 +44,35 @@ namespace LOLAPI.Web.Controllers
         public ActionResult Register()
         {
 
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult RegisterUser(UserAccount userAccount, string confirmPassword)
+        {
+
+            //Check if user already exists
+            UserAccount checkUser = _userManager.GetOneByEmail(userAccount.Email);   
+            
+            if (checkUser != null)
+            {
+                //A account with this email already exists
+            }
+            else
+            {
+
+                //Make sure passwords match then hash them
+                if (confirmPassword == userAccount.Password)
+                {
+                    //Hash the password
+
+                    //Add new user
+                    UserAccount newUser = _userManager.Add(userAccount);
+                }
+                
+            }
+            
             return View();
         }
 

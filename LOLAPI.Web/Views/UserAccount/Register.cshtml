@@ -1,5 +1,36 @@
-﻿@{
+﻿@model LOLAPI.Shared.Entities.UserAccount
+
+@{
     ViewBag.Title = "Register";
 }
 
 <h2>Register</h2>
+
+<form method="post" action="RegisterUser" enctype="multipart/form-data">
+
+    @Html.AntiForgeryToken()
+
+    <fieldset>
+        <legend>Register</legend>
+        <div class="editor-label">
+            <label for="email">Email:</label>
+            <input type="text" name="email" value="" />
+        </div>
+        <div class="editor-label">
+            <label for="userName">User Name:</label>
+            <input type="text" name="userName" value="" />
+        </div>
+        <div class="editor-label">
+            <label for="password">Password:</label>
+            <input type="password" name="password" value="" />
+        </div>
+        <div class="editor-label">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" name="confirmPassword" value="" />
+        </div>
+        <div class="editor-label">
+            <label>&nbsp;</label>
+            <input type="submit" value="Register" class="submit" />
+        </div>
+    </fieldset>
+</form>
