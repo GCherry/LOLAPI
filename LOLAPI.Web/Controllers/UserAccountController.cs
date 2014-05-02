@@ -79,6 +79,7 @@ namespace LOLAPI.Web.Controllers
             if (checkUser != null)
             {
                 //A account with this email already exists message
+                return View("Login");
             }
             else
             {
@@ -103,8 +104,7 @@ namespace LOLAPI.Web.Controllers
                 }
                 
             }
-            
-            return View();
+
         }
 
     }

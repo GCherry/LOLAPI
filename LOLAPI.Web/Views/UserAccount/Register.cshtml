@@ -2,10 +2,13 @@
 
 @{
     ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Register</h2>
-
+<hr />
+<br />
+<br />
 <form method="post" action="RegisterUser" enctype="multipart/form-data">
 
     @Html.AntiForgeryToken()
