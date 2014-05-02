@@ -7,6 +7,7 @@ using LOLAPI.Shared.Entities;
 using LOLAPI.Shared.Interfaces;
 using LOLAPI.Logic;
 using System.Security.Cryptography;
+using System.Text;
 
 namespace LOLAPI.Web.Controllers
 {
@@ -16,7 +17,7 @@ namespace LOLAPI.Web.Controllers
         private readonly IUserManager _userManager;
 
         //Dependency injection using the NinjectWebCommon.cs file to bind the User manager classes
-        UserAccountController(IUserManager manager)
+        public UserAccountController(IUserManager manager)
         {
             _userManager = manager;
         }
@@ -25,26 +26,46 @@ namespace LOLAPI.Web.Controllers
 
         public ActionResult Index()
         {
+
+            //return strBuilder.ToString();
             if (Session["UserID"] == null)
             {
-                return View("");
+                return View("Login");
             }
             else
             {
-                return View();
-            }            
+                return View("ManageUserAccount");
+            }
+
         }
 
         public ActionResult Login()
         {
 
-            return View();
+            return View("Login");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Login(UserAccount userAccount)
+        {
+
+            //Get the login information and make sure it matches
+            Boolean userLoggedIn = _userManager.LogInUser(userAccount);
+
+            if (userLoggedIn == true)
+            {
+                UserAccount userLogin = _userManager.GetOneByEmail(userAccount.Email);
+                Session["UserID"] = userLogin.Id;
+            }
+
+            return View("Login");
         }
 
         public ActionResult Register()
         {
 
-            return View();
+            return View("Register");
         }
 
         [HttpPost]
@@ -57,7 +78,7 @@ namespace LOLAPI.Web.Controllers
             
             if (checkUser != null)
             {
-                //A account with this email already exists
+                //A account with this email already exists message
             }
             else
             {
@@ -66,9 +87,19 @@ namespace LOLAPI.Web.Controllers
                 if (confirmPassword == userAccount.Password)
                 {
                     //Hash the password
+                    userAccount.Password = _userManager.GetHashedPassword(userAccount.Password);
 
                     //Add new user
                     UserAccount newUser = _userManager.Add(userAccount);
+
+                    //If User was successfully added return the user to the login screen
+                    return View("Login");
+                }
+                else
+                {
+                    //Message that passwords dont match
+
+                    return View("Register");
                 }
                 
             }

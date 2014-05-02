@@ -11,5 +11,8 @@ namespace LOLAPI.Shared.Interfaces
     {
         //bool UserLoggedIn();
         UserAccount GetOneByEmail(string email);
+        string GetHashedPassword(string password);
+        Boolean LogInUser(UserAccount user);
+
     }
 }
