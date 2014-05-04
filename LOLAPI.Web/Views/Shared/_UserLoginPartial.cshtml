@@ -1,0 +1,21 @@
+﻿
+<form method="post" action="Login" enctype="multipart/form-data">
+
+    @Html.AntiForgeryToken()
+
+    <fieldset>
+        <legend>Login</legend>
+        <div id="contact">
+            <div class="input_label user">
+                <label for="email">Email</label>
+            </div>
+            <input type="text" name="email" value="" />
+
+            <div class="input_label user">
+                <label for="password">Password</label>
+            </div>
+            <input type="password" name="password" value="" />
+            <input type="submit" value="Login" class="submit" />
+        </div>
+    </fieldset>
+</form>

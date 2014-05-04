@@ -13,11 +13,12 @@
     <header>
         <div class="content-wrapper">
             <div class="float-left">
-                <p class="site-title">@Html.ActionLink("Knowledge Base (KB)", "Index", "Product")</p>
+                <p class="site-title">@Html.ActionLink("LoL API", "Index", "Product")</p>
             </div>
             <div class="float-right">
                 <section id="login">
-                    @Html.Partial("_LoginPartial")
+                    @*@Html.Partial("_LoginPartial")*@
+                    @Html.Partial("_UserLoginPartial")
                 </section>
                 <nav>
                     <ul id="menu">
@@ -37,7 +38,7 @@
     <footer>
         <div class="content-wrapper">
             <div class="float-left">
-                <p>&copy; @DateTime.Now.Year - KB Application</p>
+                <p>&copy; @DateTime.Now.Year - LoLAPI</p>
             </div>
         </div>
     </footer>
