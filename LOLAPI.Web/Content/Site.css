@@ -755,7 +755,77 @@ tr.pager td {
         }
 }
 
-/* Login textbox test*/
+/* ===========================
+   ====== Contact Form ======= 
+   =========================== */
+
+input, textarea {
+	padding: 10px;
+	border: 1px solid #E5E5E5;
+	width: 200px;
+	color: #999999;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;		
+}
+
+textarea {
+	width: 300px;
+	height: 200px;
+	max-width: 400px;
+	line-height: 18px;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+	border-color: 1px solid #C9C9C9;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 8px;	
+}
+
+.form label {
+	margin-left: 10px;
+	color: #999999;
+}
+
+/* ===========================
+   ====== Submit Button ====== 
+   =========================== */
+
+.submit input {
+	width: 100px; 
+	height: 40px;
+	background-color: #474E69; 
+	color: #FFF;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;		
+}
+
+input[type="submit"] {
+    background: #e2e2e2;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
+    border: 1px solid #C9C9C9;
+    color: #000;
+    cursor: pointer;
+    font: bold 15px Helvetica, Arial, sans-serif;
+    height: 35px;
+    margin: 20px 20px 35px 15px;
+    position: relative;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+    width: 80px;
+}
+
+input[type="submit"]:hover {
+    background: rgba(0, 0, 0, 0.1);
+    background: -moz-linear-gradient(top, #c8c8c8 0%, #c8c8c8 100%);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%,rgba(0, 0, 0, 0.2) 100%);
+    background: -o-linear-gradient(top, #c8c8c8 0%,#c8c8c8 100%);
+    background: -ms-linear-gradient(top, #999 0%,#c8c8c8 100%);
+    background: linear-gradient(top, #c7d1d6 0%,#c7d1d6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fec151', endColorstr='#fee79a',GradientType=0 );
+/* Login textbox test
 
 .input_label {
     -moz-border-radius: 5px 0 0 5px;
@@ -800,3 +870,4 @@ label {
     line-height: 36px;
     padding: 0 0 0 30px;
 }
+*/

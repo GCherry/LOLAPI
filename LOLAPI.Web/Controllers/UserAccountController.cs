@@ -7,6 +7,10 @@ using LOLAPI.Shared.Entities;
 using LOLAPI.Shared.Interfaces;
 using LOLAPI.Logic;
 using System.Security.Cryptography;
+using System.Web.Security;
+using DotNetOpenAuth.AspNet;
+using Microsoft.Web.WebPages.OAuth;
+using WebMatrix.WebData;
 using System.Text;
 
 namespace LOLAPI.Web.Controllers
@@ -49,6 +53,12 @@ namespace LOLAPI.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(UserAccount userAccount)
         {
+
+            if (ModelState.IsValid && WebSecurity.Login(userAccount.UserName, userAccount.Password))
+            {
+                Boolean usersLoggedIn = _userManager.LogInUser(userAccount);
+   
+            }
 
             //Get the login information and make sure it matches
             Boolean userLoggedIn = _userManager.LogInUser(userAccount);

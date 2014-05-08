@@ -10,7 +10,7 @@
 <br />
 <br />
 
-<form method="post" action="Login" enctype="multipart/form-data">
+<form method="post" action="UserAccount/Login" enctype="multipart/form-data">
 
     @Html.AntiForgeryToken()
 
@@ -26,14 +26,14 @@
         <div id="contact">
             <div class="input_label user">
                 <label for="userName">UserName:</label>
-            </div>      
+            </div>
             <input type="text" name="userName" value="" />
         </div>
 
         <div id="contact">
             <div class="input_label user">
                 <label for="password">Password:</label>
-            </div>            
+            </div>
             <input type="password" name="password" value="" />
         </div>
 
