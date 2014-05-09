@@ -12,6 +12,7 @@ using DotNetOpenAuth.AspNet;
 using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
 using System.Text;
+using LOLAPI.Shared;
 
 namespace LOLAPI.Web.Controllers
 {
@@ -27,7 +28,7 @@ namespace LOLAPI.Web.Controllers
         }
 
         // GET: /UserAccount/
-
+        [LoginFilter]
         public ActionResult Index()
         {
 
@@ -43,6 +44,7 @@ namespace LOLAPI.Web.Controllers
 
         }
 
+        [LoginFilter]
         public ActionResult Login()
         {
 
@@ -53,12 +55,6 @@ namespace LOLAPI.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(UserAccount userAccount)
         {
-
-            if (ModelState.IsValid && WebSecurity.Login(userAccount.UserName, userAccount.Password))
-            {
-                Boolean usersLoggedIn = _userManager.LogInUser(userAccount);
-   
-            }
 
             //Get the login information and make sure it matches
             Boolean userLoggedIn = _userManager.LogInUser(userAccount);
@@ -117,5 +113,10 @@ namespace LOLAPI.Web.Controllers
 
         }
 
+        public ActionResult LogOff()
+        {
+            Session["UserID"] = null;
+            return View("Register");
+        }
     }
 }

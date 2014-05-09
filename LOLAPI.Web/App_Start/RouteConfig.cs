@@ -16,7 +16,7 @@ namespace LOLAPI.Web
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "UserAccount", action = "Login", id = UrlParameter.Optional }
+                defaults: new { controller = "UserAccount", action = "Register", id = UrlParameter.Optional }
             );
         }
     }

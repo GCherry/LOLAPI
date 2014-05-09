@@ -1,7 +1,7 @@
 ﻿
 @if (Session["UserID"] == null)
 {     
-<form method="post" action="UserAccount/Login" enctype="multipart/form-data">
+<form method="post" action="~/UserAccount/Login" enctype="multipart/form-data">
     @Html.AntiForgeryToken()
         <div id="content">
             <input type="text" placeholder="Email e.g. 'me@example.com'" name="email" value="" />
@@ -10,4 +10,8 @@
         </div>
 </form>
 }
-
+else
+{
+    //LOG OFF CONTROL
+    @Html.ActionLink("Log Off", "LogOff", "UserAccount")
+}
