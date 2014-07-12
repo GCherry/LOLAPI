@@ -35,6 +35,7 @@ namespace LOLAPI.Data.Migrations
                   UserName = "admin",
                   Password = "password",
                   Email = "gcherry2@gmail.com",
+                  PasswordHint = "password",
                   Active = true
               }
             );

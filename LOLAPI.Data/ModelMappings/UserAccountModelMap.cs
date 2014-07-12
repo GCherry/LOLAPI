@@ -18,6 +18,7 @@ namespace LOLAPI.Data.ModelMappings
             this.Property(i => i.Password).IsRequired();
             this.Property(i => i.Email).IsRequired().HasMaxLength(500);
             this.Property(i => i.Active).IsRequired();
+            this.Property(i => i.PasswordHint).IsOptional();
         }
     }
 }

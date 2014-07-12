@@ -21,7 +21,7 @@ namespace LOLAPI.Web.Controllers
 
         private readonly IUserManager _userManager;
 
-        //Dependency injection using the NinjectWebCommon.cs file to bind the User manager classes
+        ///Dependency injection using the NinjectWebCommon.cs file to bind the User manager classes
         public UserAccountController(IUserManager manager)
         {
             _userManager = manager;
@@ -59,7 +59,7 @@ namespace LOLAPI.Web.Controllers
             //Get the login information and make sure it matches
             Boolean userLoggedIn = _userManager.LogInUser(userAccount);
 
-            if (userLoggedIn == true)
+            if (userLoggedIn)
             {
                 UserAccount userLogin = _userManager.GetOneByEmail(userAccount.Email);
                 Session["UserID"] = userLogin.Id;
@@ -80,8 +80,8 @@ namespace LOLAPI.Web.Controllers
         {
 
             //Check if user already exists
-            UserAccount checkUser = _userManager.GetOneByEmail(userAccount.Email);   
-            
+            UserAccount checkUser = _userManager.GetOneByEmail(userAccount.Email);
+
             if (checkUser != null)
             {
                 //A account with this email already exists message
@@ -97,7 +97,7 @@ namespace LOLAPI.Web.Controllers
                     userAccount.Password = _userManager.GetHashedPassword(userAccount.Password);
 
                     //Add new user
-                    UserAccount newUser = _userManager.Add(userAccount);
+                    _userManager.Add(userAccount);
 
                     //If User was successfully added return the user to the login screen
                     return View("Login");
@@ -108,7 +108,7 @@ namespace LOLAPI.Web.Controllers
 
                     return View("Register");
                 }
-                
+
             }
 
         }

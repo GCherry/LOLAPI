@@ -94,6 +94,10 @@
     <Compile Include="Migrations\201404151023330_UserAccountEmailColumn.Designer.cs">
       <DependentUpon>201404151023330_UserAccountEmailColumn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201407120002564_PasswordHint.cs" />
+    <Compile Include="Migrations\201407120002564_PasswordHint.Designer.cs">
+      <DependentUpon>201407120002564_PasswordHint.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelMappings\BaseEntityModelMap.cs" />
     <Compile Include="ModelMappings\ChampionModelMap.cs" />
@@ -111,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201404151023330_UserAccountEmailColumn.resx">
       <DependentUpon>201404151023330_UserAccountEmailColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201407120002564_PasswordHint.resx">
+      <DependentUpon>201407120002564_PasswordHint.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

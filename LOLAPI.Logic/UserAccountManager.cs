@@ -28,11 +28,12 @@ namespace LOLAPI.Logic
         public UserAccount Add(UserAccount item)
         {
             //Create a new item
-            UserAccount user = new UserAccount()
+            var user = new UserAccount()
             {
                 UserName = item.UserName,
                 Email = item.Email,
                 Password = item.Password,
+                PasswordHint = item.PasswordHint,
                 Active = true
             };
             
@@ -70,12 +71,12 @@ namespace LOLAPI.Logic
             //get hash result after compute it
             byte[] result = md5.Hash;
 
-            StringBuilder strBuilder = new StringBuilder();
+            var strBuilder = new StringBuilder();
             for (int i = 0; i < result.Length; i++)
             {
                 //change it into 2 hexadecimal digits
                 //for each byte
-                strBuilder.Append(result[i].ToString("x2"));
+                strBuilder.Append(i.ToString("x2"));
             }
 
             return strBuilder.ToString();
