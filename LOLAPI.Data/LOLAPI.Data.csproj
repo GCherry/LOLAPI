@@ -105,6 +105,10 @@
     <Compile Include="Migrations\201502211306147_User Edits.Designer.cs">
       <DependentUpon>201502211306147_User Edits.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201502211413588_TableNames.cs" />
+    <Compile Include="Migrations\201502211413588_TableNames.Designer.cs">
+      <DependentUpon>201502211413588_TableNames.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelMappings\BaseEntityModelMap.cs" />
     <Compile Include="ModelMappings\ChampionModelMap.cs" />
@@ -128,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201502211306147_User Edits.resx">
       <DependentUpon>201502211306147_User Edits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502211413588_TableNames.resx">
+      <DependentUpon>201502211413588_TableNames.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

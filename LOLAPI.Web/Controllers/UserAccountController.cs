@@ -47,7 +47,6 @@ namespace LOLAPI.Web.Controllers
         [LoginFilter]
         public ActionResult Login()
         {
-
             return View("Login");
         }
 
@@ -63,9 +62,10 @@ namespace LOLAPI.Web.Controllers
             {
                 UserAccount userLogin = _userManager.GetOneByEmail(userAccount.Email);
                 Session["UserID"] = userLogin.Id;
+                FormsAuthentication.SetAuthCookie(userLogin.Email, false);
             }
 
-            return View("Login");
+            return RedirectToAction("Index","Home");
         }
 
         public ActionResult Register()
