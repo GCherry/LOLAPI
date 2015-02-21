@@ -55,6 +55,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -98,6 +101,10 @@
     <Compile Include="Migrations\201407120002564_PasswordHint.Designer.cs">
       <DependentUpon>201407120002564_PasswordHint.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201502211306147_User Edits.cs" />
+    <Compile Include="Migrations\201502211306147_User Edits.Designer.cs">
+      <DependentUpon>201502211306147_User Edits.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelMappings\BaseEntityModelMap.cs" />
     <Compile Include="ModelMappings\ChampionModelMap.cs" />
@@ -118,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201407120002564_PasswordHint.resx">
       <DependentUpon>201407120002564_PasswordHint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201502211306147_User Edits.resx">
+      <DependentUpon>201502211306147_User Edits.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

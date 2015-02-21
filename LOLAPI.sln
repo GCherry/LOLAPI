@@ -11,6 +11,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LOLAPI.Web", "LOLAPI.Web\LO
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LOLAPI.Shared", "LOLAPI.Shared\LOLAPI.Shared.csproj", "{BFBDE7D3-8101-4244-8639-1AB35A718974}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E35E1E82-F568-44BA-856F-1D43B03F2BDC}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LOLAPI.Test", "LOLAPI.Test\LOLAPI.Test.csproj", "{39DC282D-4532-4369-816E-C034CCF3816C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +40,10 @@ Global
 		{BFBDE7D3-8101-4244-8639-1AB35A718974}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BFBDE7D3-8101-4244-8639-1AB35A718974}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BFBDE7D3-8101-4244-8639-1AB35A718974}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39DC282D-4532-4369-816E-C034CCF3816C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39DC282D-4532-4369-816E-C034CCF3816C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39DC282D-4532-4369-816E-C034CCF3816C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39DC282D-4532-4369-816E-C034CCF3816C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
